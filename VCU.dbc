@@ -1,0 +1,123 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: VCU MCU
+VAL_TABLE_ St_MCUoffPermit 1 "permit" 0 "not permit" ;
+VAL_TABLE_ St_MCUdriverPermit 1 "permit" 0 "not permit" ;
+VAL_TABLE_ St_MCU_enable 1 "permint" 0 "not permit" ;
+VAL_TABLE_ St_motor 3 "Fault" 2 "Limit Power" 1 "Warning" 0 "reserve" ;
+VAL_TABLE_ St_motorMode 3 "slope slip" 2 "speed mode" 1 "torque mode" 0 "stop" ;
+VAL_TABLE_ St_motorDirection 3 "reserve" 2 "CW" 1 "CCW" 0 "Stop" ;
+VAL_TABLE_ S_motor_direction 3 "Reserve" 2 "CW" 1 "CCW" 0 "N Mode" ;
+VAL_TABLE_ S_motor_run_stop 3 "Reserve" 2 "Stop" 1 "Run" 0 "Reserve" ;
+VAL_TABLE_ S_motor_control_mode 3 "Reserve" 2 "Speed Mode" 1 "Torque Mode" 0 "Reserve" ;
+
+
+BO_ 2349508263 MCU_Faliure_1: 8 VCU
+ SG_ MCU_Number : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Motor_Num : 52|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Motor_Quantity : 48|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Encoder_failure : 20|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CAN_offline_failure : 19|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Motor_over_temperature_fault : 18|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Motor_over_temperature_warning : 17|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Reserved : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Overspeed_fault : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Module_over_temperature_warning : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Module_over_temperature_fault : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Busbar_undervoltage_fault : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Bus_overvoltage_fault : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Total_hardware_failure : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Hardware_overvoltage_fault : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Software_overcurrent_fault : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Low_voltage_undervoltage_fault : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Stall_failure : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ AC_Hall_failure : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Temperature_difference_failure : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Fan_failure : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Zero_offset_fault : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Hardware_overcurrent_fault : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Hardware_driver_failure : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2349442727 MCU_State_2: 8 VCU
+ SG_ N_MCUTemp : 56|8@1+ (1,-40) [-40|150] "C" Vector__XXX
+ SG_ N_motorTemp : 48|8@1+ (1,-40) [-40|150] "C" Vector__XXX
+ SG_ N_MCUDCVoltage : 32|16@1+ (0.1,0) [0|800] "V" Vector__XXX
+ SG_ N_MotorACVoltage : 16|16@1+ (0.1,0) [0|800] "V" Vector__XXX
+ SG_ N_MotorACCurrent : 0|16@1+ (0.1,0) [0|800] "A" Vector__XXX
+
+BO_ 2349377191 MCU_State_1: 8 VCU
+ SG_ St_MCUoffPermit : 56|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ St_MCUdriverPermit : 55|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ St_MCU_enable : 54|1@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ St_motor : 52|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ St_motorMode : 50|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ St_motorDirection : 48|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ N_motorSpeed : 32|16@1+ (1,-15000) [-15000|15000] "Nm" Vector__XXX
+ SG_ N_motorTorque : 16|16@1+ (1,-15000) [-15000|15000] "Nm" Vector__XXX
+ SG_ N_motorTorqueLim : 0|16@1+ (1,-15000) [-15000|15000] "Nm" Vector__XXX
+
+BO_ 2281744294 VCU_Transmit: 8 MCU
+ SG_ S_motor_speed : 32|16@1- (1,-15000) [-15000|15000] "rpm" Vector__XXX
+ SG_ S_motor_torque : 16|16@1- (1,-15000) [-15000|15000] "Nm" Vector__XXX
+ SG_ S_motor_direction : 6|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ S_motor_run_stop : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ S_motor_control_mode : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ S_motor_running_mode : 0|2@1+ (1,0) [0|0] "" Vector__XXX
+
+
+
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 0;
+BA_DEF_  "GenCanBaudRate" INT 0 0;
+BA_DEF_  "GenCanAddress" HEX 0 0;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenCanBaudRate" 0;
+BA_DEF_DEF_  "GenCanAddress" 0;
+BA_DEF_DEF_  "BusType" "CAN";
+BA_ "GenMsgCycleTime" BO_ 2349508263 100;
+BA_ "GenMsgCycleTime" BO_ 2349442727 100;
+BA_ "GenMsgCycleTime" BO_ 2349377191 10;
+BA_ "GenMsgCycleTime" BO_ 2281744294 10;
+VAL_ 2349377191 St_MCUoffPermit 1 "permit" 0 "not permit" ;
+VAL_ 2349377191 St_MCUdriverPermit 1 "permit" 0 "not permit" ;
+VAL_ 2349377191 St_MCU_enable 1 "permint" 0 "not permit" ;
+VAL_ 2349377191 St_motor 3 "Fault" 2 "Limit Power" 1 "Warning" 0 "reserve" ;
+VAL_ 2349377191 St_motorMode 3 "slope slip" 2 "speed mode" 1 "torque mode" 0 "stop" ;
+VAL_ 2349377191 St_motorDirection 3 "reserve" 2 "CW" 1 "CCW" 0 "Stop" ;
+VAL_ 2281744294 S_motor_direction 3 "Reserve" 2 "CW" 1 "CCW" 0 "N Mode" ;
+VAL_ 2281744294 S_motor_run_stop 3 "Reserve" 2 "Stop" 1 "Run" 0 "Reserve" ;
+VAL_ 2281744294 S_motor_control_mode 3 "Reserve" 2 "Speed Mode" 1 "Torque Mode" 0 "Reserve" ;
+
